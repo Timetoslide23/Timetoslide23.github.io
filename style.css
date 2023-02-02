@@ -1,0 +1,28 @@
+/* file style.css */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Stile per le domande */
+h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Stile per i pulsanti vero/falso */
+input[type="radio"] {
+  margin: 0 10px;
+}
+
+/* Stile per il pulsante di submit */
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
