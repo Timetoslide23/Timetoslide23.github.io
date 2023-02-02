@@ -2,11 +2,11 @@ function submitAnswers() {
   var score = 0;
         
   // Prendi le risposte alle domande
-  var q1 = document.forms["quizForm"]["question1"].value;
-  var q2 = document.forms["quizForm"]["question2"].value;
-  var q3 = document.forms["quizForm"]["question3"].value;
-  var q4 = document.forms["quizForm"]["question4"].value;
-  var q5 = document.forms["quizForm"]["question5"].value;
+  var q1 = document.forms.namedItem("question1").value;
+  var q2 = document.forms.namedItem("question2").value;
+  var q3 = document.forms.namedItem("question3").value;
+  var q4 = document.forms.namedItem("question4").value;
+  var q5 = document.forms.namedItem("question5").value;
         
   // Controlla se le risposte sono corrette
   if (q1 === "true") {
