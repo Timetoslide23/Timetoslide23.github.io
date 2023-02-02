@@ -4,38 +4,54 @@
     <meta charset="UTF-8">
     <title>Quiz musicale</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
   </head>
   <body>
     <div class="quiz-container">
       <h1>Quiz musicale</h1>
       <form id="quizForm">
-        <div class="question-container">
-          <p class="question">Domanda 1: Il sole sorge da ovest?</p>
+        <p id="question1">Domanda 1</p>
+         <label>
+           <input type="radio" name="question1" value="vero">Vero
+         </label>
+         <label>
+           <input type="radio" name="question1" value="falso">Falso
+          </label>
+          
+        <p id="question2">Domanda 2</p>
           <label>
-            <input type="radio" name="question1" value="vero">
-            Vero
+            <input type="radio" name="question2" value="vero">Vero
           </label>
           <label>
-            <input type="radio" name="question1" value="falso">
-            Falso
+            <input type="radio" name="question2" value="falso">Falso
           </label>
-        </div>
-        <!-- Ripeti il codice sopra per le altre domande -->
-        <div class="question-container">
-          <p class="question">Domanda 2: La Terra è piatta?</p>
+          
+        <p id="question3">Domanda 3</p>
           <label>
-            <input type="radio" name="question2" value="vero">
-            Vero
+            <input type="radio" name="question3" value="vero">Vero
           </label>
           <label>
-            <input type="radio" name="question2" value="falso">
-            Falso
+            <input type="radio" name="question3" value="falso">Falso
           </label>
-        </div>
-        <!-- ...altre domande... -->
-        <button type="submit">Invia risposte</button>
+          
+        <p id="question4">Domanda 4</p>
+          <label>
+            <input type="radio" name="question4" value="vero">Vero
+          </label>
+          <label>
+            <input type="radio" name="question4" value="falso">Falso
+          </label>
+          
+        <p id="question5">Domanda 5</p>
+          <label>
+            <input type="radio" name="question5" value="vero">Vero
+          </label>
+          <label>
+            <input type="radio" name="question5" value="falso">Falso
+          </label>
+          
+       <input type="button" value="Invia le risposte" onclick="submitAnswers()">
       </form>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
