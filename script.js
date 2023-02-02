@@ -1,4 +1,5 @@
 function home() {
+  gtag('event', 'click', {'value' : 'home'});
   window.location.href = "index.html";
 }
 function documentazione() {
