@@ -67,6 +67,14 @@ function risultato() {
   var parametri = new URLSearchParams(window.location.search),
   score=parametri.get("score");
   score=parseInt(score,2);
+  //SALVATAGGIO DEI DATI NEL LOCALSTORAGE
+  if(localStorage.getItem(score.toString())){
+    localStorage.setItem(score.toString(),Number(localStorage.getItem(score.toString()))+1);
+  }
+  else{
+    localStorage.setItem(score.toString(),1);
+  }
+  //SCELTA DELLA PLAYLIST
   if(score<16){
     random = Math.floor(Math.random()*200)+1;
     playlist="https://www.youtube.com/embed/watch?v=+&list=PLZWdplz_BLqd1QNMiF6lG09X1cJLzTm-y&autoplay=1&mute=1&index="+random.toString();
