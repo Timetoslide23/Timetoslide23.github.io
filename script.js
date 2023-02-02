@@ -3,11 +3,11 @@ function submitAnswers() {
   var finito = 1;
         
   // Prendi le risposte alle domande
-  var q1 = document.getElementById("quizForm").elements.question1.value;
-  var q2 = document.getElementById("quizForm").elements.question2.value;
-  var q3 = document.getElementById("quizForm").elements.question3.value;
-  var q4 = document.getElementById("quizForm").elements.question4.value;
-  var q5 = document.getElementById("quizForm").elements.question5.value;
+  var q1 = document.getElementById("domande").elements.question1.value;
+  var q2 = document.getElementById("domande").elements.question2.value;
+  var q3 = document.getElementById("domande").elements.question3.value;
+  var q4 = document.getElementById("domande").elements.question4.value;
+  var q5 = document.getElementById("domande").elements.question5.value;
         
   // Controllo delle risposte
   if (q1 === "vero") {score++;}
