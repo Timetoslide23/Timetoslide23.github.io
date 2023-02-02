@@ -1,37 +1,41 @@
-<!-- file index.html -->
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <title>Quiz musicale</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
   </head>
   <body>
-    <div class="container">
-      <h1>Domande a vero/falso</h1>
+    <div class="quiz-container">
+      <h1>Quiz musicale</h1>
       <form id="quizForm">
-        <h3>Domanda 1: Il Sole sorge a est?</h3>
-        <input type="radio" name="question1" value="true">Vero
-        <input type="radio" name="question1" value="false">Falso
-        
-        <h3>Domanda 2: La Terra è piatta?</h3>
-        <input type="radio" name="question2" value="true">Vero
-        <input type="radio" name="question2" value="false">Falso
-        
-        <h3>Domanda 3: La luna è un satellite artificiale?</h3>
-        <input type="radio" name="question3" value="true">Vero
-        <input type="radio" name="question3" value="false">Falso
-        
-        <h3>Domanda 4: La Terra è il terzo pianeta dal Sole?</h3>
-        <input type="radio" name="question4" value="true">Vero
-        <input type="radio" name="question4" value="false">Falso
-        
-        <h3>Domanda 5: L'acqua bolle a 100 gradi Celsius?</h3>
-        <input type="radio" name="question5" value="true">Vero
-        <input type="radio" name="question5" value="false">Falso
-        
-        <br><br>
-        <input type="button" value="Submit Answers" onclick="submitAnswers()">
+        <div class="question-container">
+          <p class="question">Domanda 1: Il sole sorge da ovest?</p>
+          <label>
+            <input type="radio" name="question1" value="vero">
+            Vero
+          </label>
+          <label>
+            <input type="radio" name="question1" value="falso">
+            Falso
+          </label>
+        </div>
+        <!-- Ripeti il codice sopra per le altre domande -->
+        <div class="question-container">
+          <p class="question">Domanda 2: La Terra è piatta?</p>
+          <label>
+            <input type="radio" name="question2" value="vero">
+            Vero
+          </label>
+          <label>
+            <input type="radio" name="question2" value="falso">
+            Falso
+          </label>
+        </div>
+        <!-- ...altre domande... -->
+        <button type="submit">Invia risposte</button>
       </form>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
