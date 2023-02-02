@@ -1,5 +1,6 @@
 function submitAnswers() {
   var score = 0;
+  var finito = 1;
         
   // Prendi le risposte alle domande
   var q1 = document.getElementById("quizForm").elements.question1.value;
@@ -8,23 +9,25 @@ function submitAnswers() {
   var q4 = document.getElementById("quizForm").elements.question4.value;
   var q5 = document.getElementById("quizForm").elements.question5.value;
         
-  // Controlla se le risposte sono corrette
-  if (q1 === "true") {
-    score++;
-  }
-  if (q2 === "false") {
-    score++;
-  }
-  if (q3 === "false") {
-    score++;
-  }
-  if (q4 === "true") {
-    score++;
-  }
-  if (q5 === "true") {
-    score++;
-  }
-        
+  // Controllo delle risposte
+  if (q1 === "true") {score++;}
+  else if(q1 === "false"){}
+  else{finito=0;}
+  if (q2 === "true") {score=score+10;}
+  else if(q2 === "false"){}
+  else{finito=0;}
+  if (q3 === "true") {score=score+100;}
+  else if(q3 === "false"){}
+  else{finito=0;}
+  if (q4 === "true") {score=score+1000;}
+  else if(q4 === "false"){}
+  else{finito=0;}
+  if (q5 === "true") {score=score+10000;}
+  else if(q5 === "false"){}
+  else{finito=0;}
+  
+  score=parseInt(score, 2);
+  
   // Reindirizza alla pagina result.html
-  window.location.href = "result.html?score=" + score;
+  if(finito==1){window.location.href = "result.html?score=" + score;}
 }
