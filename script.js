@@ -10,20 +10,20 @@ function submitAnswers() {
   var q5 = document.getElementById("quizForm").elements.question5.value;
         
   // Controllo delle risposte
-  if (q1 === "true") {score++;}
-  else if(q1 === "false"){}
+  if (q1 === "vero") {score++;}
+  else if(q1 === "falso"){}
   else{finito=0;}
-  if (q2 === "true") {score=score+10;}
-  else if(q2 === "false"){}
+  if (q2 === "vero") {score=score+10;}
+  else if(q2 === "falso"){}
   else{finito=0;}
-  if (q3 === "true") {score=score+100;}
-  else if(q3 === "false"){}
+  if (q3 === "vero") {score=score+100;}
+  else if(q3 === "falso"){}
   else{finito=0;}
-  if (q4 === "true") {score=score+1000;}
-  else if(q4 === "false"){}
+  if (q4 === "vero") {score=score+1000;}
+  else if(q4 === "falso"){}
   else{finito=0;}
-  if (q5 === "true") {score=score+10000;}
-  else if(q5 === "false"){}
+  if (q5 === "vero") {score=score+10000;}
+  else if(q5 === "falso"){}
   else{finito=0;}
   
   score=parseInt(score, 2);
