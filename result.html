@@ -1,0 +1,20 @@
+<!-- file result.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="result"></h1>
+    </div>
+    
+    <script>
+      // Prendi il risultato dall'URL
+      var score = window.location.search.split("=")[1];
+      
+      // Visualizza il risultato
+      document.getElementById("result").innerHTML = "Il tuo risultato è: " + score;
+    </script>
+  </body>
+</html>
