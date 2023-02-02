@@ -1,5 +1,4 @@
 function home() {
-  gtag('event', 'click', {'value' : 1});
   window.location.href = "index.html";
 }
 function documentazione() {
@@ -68,13 +67,8 @@ function risultato() {
   var parametri = new URLSearchParams(window.location.search),
   score=parametri.get("score");
   score=parseInt(score,2);
-  //SALVATAGGIO DEI DATI NEL LOCALSTORAGE
-  if(localStorage.getItem(score.toString())){
-    localStorage.setItem(score.toString(),Number(localStorage.getItem(score.toString()))+1);
-  }
-  else{
-    localStorage.setItem(score.toString(),1);
-  }
+  //SALVATAGGIO DEI DATI IN GOOGLE ANALYTICS
+  gtag('event', 'risultato', {'value' : score});
   //SCELTA DELLA PLAYLIST
   if(score<16){
     random = Math.floor(Math.random()*200)+1;
