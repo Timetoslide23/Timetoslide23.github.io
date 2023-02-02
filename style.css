@@ -4,7 +4,7 @@ body {
   text-align: center;
 }
 
-.quiz-container {
+.quiz {
   background-color: white;
   border: 1px solid gray;
   display: inline-block;
@@ -17,11 +17,8 @@ h1 {
   margin-bottom: 1rem;
 }
 
-.question-container {
-  margin-bottom: 1rem;
-}
 
-.question {
+.domande {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
@@ -32,11 +29,11 @@ label {
   margin-bottom: 0.5rem;
 }
 
-input[type="radio"] {
+input[type="risposta"] {
   margin-right: 0.5rem;
 }
 
-button[type="submit"] {
+button[type="invia"] {
   background-color: green;
   border: none;
   color: white;
