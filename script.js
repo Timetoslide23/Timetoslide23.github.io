@@ -56,12 +56,14 @@ function vero5() {
   score=parametri.get("score");
   score=0+score;
   window.location.href = "risultati.html?score=" +score;
+  risultato();
 }
 function falso5() {
   var parametri = new URLSearchParams(window.location.search),
   score=parametri.get("score");
   score=1+score;
   window.location.href = "risultati.html?score=" +score;
+  risultato();
 }
 function risultato() {
   var parametri = new URLSearchParams(window.location.search),
