@@ -17,17 +17,23 @@
 }
 
 .puntovuoto{
+  margin: 10px 10px;
   height: 25px;
   width: 25px;
+  border-style: solid;
   background-color: #FFEDDB;
+  border-color: #FFFFFF;
   border-radius: 50%;
   display: inline-block;
 }
 
 .puntopieno{
+  margin: 10px 10px;
   height: 25px;
   width: 25px;
+  border-style: solid;
   background-color: #FFAB73;
+  border-color: #FFFFFF;
   border-radius: 50%;
   display: inline-block;
 }
