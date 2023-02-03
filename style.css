@@ -16,6 +16,22 @@
   float: right;
 }
 
+.puntovuoto{
+  height: 25px;
+  width: 25px;
+  background-color: #FFEDDB;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.puntopieno{
+  height: 25px;
+  width: 25px;
+  background-color: #FFAB73;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 body {
   background-color: #FFEDDB;
   font-family: "Source Serif Pro", sans-serif;
