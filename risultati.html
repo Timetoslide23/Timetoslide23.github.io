@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- GOOGLE ANALYTICS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6S7WZ0WV5T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6S7WZ0WV5T');
+    </script>
+    <!-- TITOLO E ICONA -->
+    <meta charset="UTF-8">
+    <title>Find Your Song</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/Timetoslide23/Timetoslide23.github.io/main/Immagini/icona.png">
+    <!-- CARICA CSS E JAVASCRIPT -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <!-- CARICA IL FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&dispay=block" rel="stylesheet">
+  </head>
+  <body onload=risultato()>
+    <div class="header">
+      <div class="logo">FindYourSong</div>
+      <div class="header-right">
+        <button class="bottoneheader" onclick=home()>Home</button>
+        <button class="bottoneheader" onclick=documentazione()>Documentazione</button>
+      </div>
+    </div>
+    <h1><u>Risultato:</u></h1>
+    <iframe id="video" width="960" height="540" allow="autoplay" frameborder="0" allowfullscreen></iframe>
+  </body>
+</html>
