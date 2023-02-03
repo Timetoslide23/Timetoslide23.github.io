@@ -81,17 +81,18 @@ function indietro2() {
 function risultato() {
   var parametri = new URLSearchParams(window.location.search),
   score=parametri.get("score");
-  score=parseInt(score,2);
-  //SALVATAGGIO DEI DATI IN GOOGLE ANALYTICS
-  gtag('event', 'risultato', {'value' : score});
   //SCELTA DELLA PLAYLIST
-  if(score<4){
+  if(score=="000" || score=="001" || score=="010" || score=="100"){
     random = Math.floor(Math.random()*200)+1;
     playlist="https://www.youtube.com/embed/watch?v=+&list=PLZWdplz_BLqd1QNMiF6lG09X1cJLzTm-y&autoplay=1&mute=1&index="+random.toString();
+    //SALVATAGGIO DEI DATI IN GOOGLE ANALYTICS
+    gtag('event', 'risultato', {'label' : "playlist triste"});
   }
-  else{
+  if(score=="011" || score=="101" || score=="110" || score=="111"){
     random = Math.floor(Math.random()*34)+1;
     playlist="https://www.youtube.com/embed/watch?v=+&list=PLaoDoNNpBs9FsWlMtUsh1dL4435EBPbtY&autoplay=1&mute=1&index="+random.toString();
+    //SALVATAGGIO DEI DATI IN GOOGLE ANALYTICS
+    gtag('event', 'risultato', {'label' : "playlist felice"});
   }
   iframe = document.getElementById("video").src = playlist;
 }
