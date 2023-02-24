@@ -46,6 +46,7 @@ button{
 .bheader{
   position: fixed;
   z-index: 0;
+  padding: 0px calc(0.5vw + 0.5vh);
   margin-top: calc(2vw + 2vh);
   right: calc(0.5vw + 0.5vh);
   height: calc(4.25vw + 4.25vh);
@@ -69,6 +70,7 @@ button{
 .bheaderattivo{
   position: fixed;
   z-index: 2;
+  padding: 0px calc(0.5vw + 0.5vh);
   margin-top: calc(2vw + 2vh);
   right: calc(0.5vw + 0.5vh);
   height: calc(4.25vw + 4.25vh);
