@@ -25,11 +25,10 @@
   </head>
   <body onload=creatematrix(3)>
     <div class="header">
-      <div class="logo">TTM</div>
-      <div class="header-right">
-        <button class="bheader" onclick=home()>Home</button>
-        <button class="bheader" onclick=about()>About</button>
-      </div>
+      <div class="bottomborder"></div>
+      <span class="logo">TTM</span>
+      <button class="bheader" onclick=about()>About</button>
+      <button class="bheader" onclick=home() style="right: calc(6vw + 6vh);">Home</button>
     </div>
     <h1>Select the dimension:</h1>
     <input type="number" min="1" max="10" id="rowscolumns">
