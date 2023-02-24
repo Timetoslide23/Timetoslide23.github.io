@@ -56,11 +56,11 @@ button{
   border-top-left-radius: calc(1vw + 1vh);
   border-top-right-radius: calc(1vw + 1vh);
   border-bottom-width: 0px;
-  transition: 0.25s ease-in-out;
-  -webkit-transition: 0.25s ease;
 }
 
 .bheader:hover{
+  transition: 0.25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
   color: #FFFFFF;
   z-index: 3;
   box-shadow: inset 0 calc(-4.25vw - 4.25vh) 0 0 #A7BED3;
@@ -79,8 +79,6 @@ button{
   border-top-left-radius: calc(1vw + 1vh);
   border-top-right-radius: calc(1vw + 1vh);
   border-bottom-width: 0px;
-  transition: 0.25s ease-in-out;
-  -webkit-transition: 0.25s ease-in-out;
 }
 
 body {
@@ -101,14 +99,22 @@ p{
   padding: calc(2vw + 2vh);
   border: calc(0.5vw + 0.5vh) solid #29312c;
   border-radius: calc(1.5vw + 1.5vh);
-  font-size: calc(2.5vw + 2.5vh);
-  color: #FFFFFF;
-  background-color: #29312c;
+  font-size: calc(2vw + 2vh);
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.determinant{
+  background-image: url('Immagini/matrix.jpg');
+  background-size: cover;
+  background-attachment: absolute;
+  background-position: center;
 }
 
 .bselection:hover{
-  color: #29312c;
-  background-color: #FFFFFF;
+  color: #FFFFFF;
+  background-image: none;
+  background-color: #29312c;
   box-shadow: 0 calc(0.5vw + 0.5vh) calc(0.5vw + 0.5vh) 0 #808080, 0 calc(0.5vw + 0.5vh) calc(0.5vw + 0.5vh) 0 #808080;
 }
 
