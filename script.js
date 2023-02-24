@@ -5,6 +5,9 @@ function home() {
 function about() {
   window.location.href = "about.html";
 }
+function contacts() {
+  window.location.href = "contacts.html";
+}
 function determinant() {
   window.location.href = "determinant.html";
 }
