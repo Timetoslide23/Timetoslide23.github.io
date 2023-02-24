@@ -12,8 +12,8 @@
   position: fixed;
   background: #29312c;
   top: calc(6vw + 6vh);
-  left: 0px;
-  height: calc(0.25vw + 0.25vh);
+  left: 0;
+  height: 2px;
   width: 100%;
   z-index: 1;
 }
@@ -45,12 +45,13 @@ button{
 .bheader{
   position: fixed;
   z-index: 0;
-  padding: 0px calc(0.5vw + 0.5vh);
-  top: calc(2vw + 2vh);
+  padding: 0 calc(0.5vw + 0.5vh);
+  box-sizing: content-box;
+  top: calc(3vw + 3vh);
   right: calc(0.5vw + 0.5vh);
-  height: calc(4.25vw + 4.25vh);
+  height: calc(3vw + 3vh);
   font-size: calc(2vw + 2vh);
-  border: calc(0.25vw + 0.25vh) solid #29312c;
+  border: 2px solid #29312c;
   color: #29312c;
   background-color: #FFFFFF;
   border-top-left-radius: calc(1vw + 1vh);
@@ -63,18 +64,21 @@ button{
   -webkit-transition: 0.25s ease-in-out;
   color: #FFFFFF;
   z-index: 3;
+  top: calc(2vw + 2vh);
+  height: calc(4vw + 4vh);
   box-shadow: inset 0 calc(-4.25vw - 4.25vh) 0 0 #A7BED3;
 }
 
 .bheaderattivo{
   position: fixed;
   z-index: 2;
-  padding: 0px calc(0.5vw + 0.5vh);
+  padding: 0 calc(0.5vw + 0.5vh);
   top: calc(2vw + 2vh);
   right: calc(0.5vw + 0.5vh);
-  height: calc(4.25vw + 4.25vh);
+  box-sizing: content-box;
+  height: calc(4vw + 4vh);
   font-size: calc(2vw + 2vh);
-  border: calc(0.25vw + 0.25vh) solid #29312c;
+  border: 2px solid #29312c;
   color: #FFFFFF;
   background-color: #A7BED3;
   border-top-left-radius: calc(1vw + 1vh);
@@ -89,7 +93,7 @@ body {
   text-align: center;
   font-size: calc(1.5vw + 1.5vh);
   margin: 0px;
-  padding: calc(6.25vw + 6.25vh) 0px;
+  padding: calc(6vw + 6vh + 2px) 0px;
 }
 
 p{
@@ -98,7 +102,7 @@ p{
 
 .bselection{
   padding: calc(2vw + 2vh);
-  border: calc(0.5vw + 0.5vh) solid #29312c;
+  border: 4px solid #29312c;
   border-radius: calc(1.5vw + 1.5vh);
   font-size: calc(2vw + 2vh);
   color: #000000;
