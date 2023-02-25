@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body onload=setslideshow()>
     <div class="header">
       <div class="bottomborder"></div>
       <span class="logo">TTM</span>
@@ -33,7 +33,22 @@
     </div>
     <br></br>
     <h1>Available arguments:</h1>
-    <br>
-    <button class="bselection determinant" onclick=determinant()>DETERMINANT OF A MATRIX</button>
+    <div class="slider">
+      <span id="slide-1"></span>
+      <span id="slide-2"></span>
+      <span id="slide-3"></span>
+      <div class="image-container" id="contenitore">
+        <img id="immagineprima" src="Immagini/collatz.png" class="slide" style="width: calc(100% / 3); height: calc(30vw + 30vh);" />
+        <img id="immagineora" src="Immagini/mandelbrot.png" class="slide"  style="width: calc(100% / 3); height: calc(30vw + 30vh);" />
+        <img id="immaginedopo" src="Immagini/galton.png" class="slide"  style="width: calc(100% / 3); height: calc(30vw + 30vh);" />
+      </div>
+      <div class="buttons">
+        <button class="bslidefull" id="bslide1" onclick=slide1()></button>
+        <button class="bslideempty" id="bslide2" onclick=slide2()></button>
+        <button class="bslideempty" id="bslide3" onclick=slide3()></button>
+        <button class="bslideempty" id="bslide4" onclick=slide4()></button>
+        <button class="bslideempty" id="bslide5" onclick=slide5()></button>
+      </div>
+    </div>
   </body>
 </html>
