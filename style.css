@@ -153,6 +153,9 @@ input{
   height: calc(30vw + 30vh);
   clear: both;
   position: relative;
+  border: 2px solid #29312c;
+  border-left-width: 0;
+  border-right-width: 0;
 }
 .slide {
   float: left;
