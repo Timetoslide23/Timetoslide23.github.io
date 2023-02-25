@@ -41,7 +41,6 @@ function creatematrix(a) {
         input.style.width='calc('+prop.toString()+'vw)';
         input.style.height='calc(3vw + 3vh)';
         input.style.maxWidth = "calc(7vw + 7vh)";
-        input.style.maxHeight = "100px";
       }
     }
   }
@@ -83,5 +82,196 @@ function determinantcalc(a){
       else{det-=a[i][0]*determinantcalc(b);}
     }
     return det;
+  }
+}
+function setslideshow(){
+  slideIndex = 0;
+  ok=1;
+  timeout=setTimeout(() => {autoSlide();},2000)
+}
+function autoSlide() {
+  if(ok==1){
+    var immagini=["mandelbrot","collatz","galton","feigenbaum","primemap"]
+    contenitore=document.getElementById("contenitore");
+    ora=document.getElementById("immagineora");
+    dopo=document.getElementById("immaginedopo");
+    slideIndex++;
+    slideIndex=slideIndex%5;
+    dopo.src = "Immagini/"+immagini[slideIndex]+".png";
+    contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
+    contenitore.style.left = "-200%";
+    timeout=setTimeout(() => {
+      ora.src = "Immagini/"+immagini[slideIndex]+".png";
+      contenitore.style.transition = "0s";
+      contenitore.style.left = "-100%";
+      timeout=setTimeout(() => {autoSlide();},2000)},2000)
+    setbutton();
+  }
+}
+function slide1(){
+  if(ok==1 && slideIndex!=0){
+    clearTimeout(timeout)
+    ok=0;
+    contenitore=document.getElementById("contenitore");
+    prima=document.getElementById("immagineprima");
+    ora=document.getElementById("immagineora");
+    dopo=document.getElementById("immaginedopo");
+    if(slideIndex>0){
+      prima.src = "Immagini/mandelbrot.png";
+      contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
+      contenitore.style.left = "0";
+    }
+    timeout=setTimeout(() => {
+      ora.src = "Immagini/mandelbrot.png";
+      contenitore.style.transition = "0s";
+      contenitore.style.left = "-100%";
+      ok=1;
+      timeout=setTimeout(() => {autoSlide();},2000)},2000)
+    slideIndex=0;
+    setbutton();
+  }
+}
+function slide2(){
+  if(ok==1 && slideIndex!=1){
+    clearTimeout(timeout)
+    ok=0;
+    contenitore=document.getElementById("contenitore");
+    prima=document.getElementById("immagineprima");
+    ora=document.getElementById("immagineora");
+    dopo=document.getElementById("immaginedopo");
+    if(slideIndex>1){
+      prima.src = "Immagini/collatz.png";
+      contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
+      contenitore.style.left = "0";
+    }
+    else if(slideIndex<1){
+      dopo.src = "Immagini/collatz.png";
+      contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
+      contenitore.style.left = "-200%";
+    }
+    timeout=setTimeout(() => {
+      ora.src = "Immagini/collatz.png";
+      contenitore.style.transition = "0s";
+      contenitore.style.left = "-100%";
+      ok=1;
+      timeout=setTimeout(() => {autoSlide();},2000)},2000)
+    slideIndex=1;
+    setbutton();
+  }
+}
+function slide3(){
+  if(ok==1 && slideIndex!=2){
+    clearTimeout(timeout)
+    ok=0;
+    contenitore=document.getElementById("contenitore");
+    prima=document.getElementById("immagineprima");
+    ora=document.getElementById("immagineora");
+    dopo=document.getElementById("immaginedopo");
+    if(slideIndex>2){
+      prima.src = "Immagini/galton.png";
+      contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
+      contenitore.style.left = "0";
+    }
+    else if(slideIndex<2){
+      dopo.src = "Immagini/galton.png";
+      contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
+      contenitore.style.left = "-200%";
+    }
+    timeout=setTimeout(() => {
+      ora.src = "Immagini/galton.png";
+      contenitore.style.transition = "0s";
+      contenitore.style.left = "-100%";
+      ok=1;
+      timeout=setTimeout(() => {autoSlide();},2000)},2000)
+    slideIndex=2;
+    setbutton();
+  }
+}
+function slide4(){
+  if(ok==1 && slideIndex!=3){
+    clearTimeout(timeout)
+    ok=0;
+    contenitore=document.getElementById("contenitore");
+    prima=document.getElementById("immagineprima");
+    ora=document.getElementById("immagineora");
+    dopo=document.getElementById("immaginedopo");
+    if(slideIndex>3){
+      prima.src = "Immagini/feigenbaum.png";
+      contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
+      contenitore.style.left = "0";
+    }
+    else if(slideIndex<3){
+      dopo.src = "Immagini/feigenbaum.png";
+      contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
+      contenitore.style.left = "-200%";
+    }
+    timeout=setTimeout(() => {
+      ora.src = "Immagini/feigenbaum.png";
+      contenitore.style.transition = "0s";
+      contenitore.style.left = "-100%";
+      ok=1;
+      timeout=setTimeout(() => {autoSlide();},2000)},2000)
+    slideIndex=3;
+    setbutton();
+  }
+}
+function slide5(){
+  if(ok==1 && slideIndex!=4){
+    clearTimeout(timeout)
+    ok=0;
+    contenitore=document.getElementById("contenitore");
+    prima=document.getElementById("immagineprima");
+    ora=document.getElementById("immagineora");
+    dopo=document.getElementById("immaginedopo");
+    if(slideIndex<4){
+      dopo.src = "Immagini/primemap.png";
+      contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
+      contenitore.style.left = "-200%";
+    }
+    timeout=setTimeout(() => {
+      ora.src = "Immagini/primemap.png";
+      contenitore.style.transition = "0s";
+      contenitore.style.left = "-100%";
+      ok=1;
+      timeout=setTimeout(() => {autoSlide();},2000)},2000)
+    slideIndex=4;
+    setbutton();
+  }
+}
+function setbutton(){
+  if(slideIndex==0){
+    document.getElementById("bslide1").className = "bslidefull";
+    document.getElementById("bslide2").className = "bslideempty";
+    document.getElementById("bslide3").className = "bslideempty";
+    document.getElementById("bslide4").className = "bslideempty";
+    document.getElementById("bslide5").className = "bslideempty";
+  }
+  if(slideIndex==1){
+    document.getElementById("bslide1").className = "bslideempty";
+    document.getElementById("bslide2").className = "bslidefull";
+    document.getElementById("bslide3").className = "bslideempty";
+    document.getElementById("bslide4").className = "bslideempty";
+    document.getElementById("bslide5").className = "bslideempty";
+  }
+  if(slideIndex==2){
+    document.getElementById("bslide1").className = "bslideempty";
+    document.getElementById("bslide2").className = "bslideempty";
+    document.getElementById("bslide3").className = "bslidefull";
+    document.getElementById("bslide4").className = "bslideempty";
+    document.getElementById("bslide5").className = "bslideempty";
+  }
+  if(slideIndex==3){
+    document.getElementById("bslide1").className = "bslideempty";
+    document.getElementById("bslide2").className = "bslideempty";
+    document.getElementById("bslide3").className = "bslideempty";
+    document.getElementById("bslide4").className = "bslidefull";
+    document.getElementById("bslide5").className = "bslideempty";
+  }
+  if(slideIndex==4){
+    document.getElementById("bslide1").className = "bslideempty";
+    document.getElementById("bslide2").className = "bslideempty";
+    document.getElementById("bslide3").className = "bslideempty";
+    document.getElementById("bslide4").className = "bslideempty";
+    document.getElementById("bslide5").className = "bslidefull";
   }
 }
