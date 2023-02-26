@@ -91,7 +91,7 @@ function setslideshow(){
 }
 function autoSlide() {
   carosello=document.getElementById("carosello");
-  if(ok==1 && carosello.matches(':hover')){
+  if(ok==1 && carosello.matches(':hover')==0){
     ok=0;
     immagini=["mandelbrot","collatz","galton","feigenbaum","primemap"]
     contenitore=document.getElementById("contenitore");
