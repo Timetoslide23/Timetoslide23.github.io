@@ -90,8 +90,10 @@ function setslideshow(){
   timeout=setTimeout(() => {autoSlide();},2000)
 }
 function autoSlide() {
-  if(ok==1){
-    var immagini=["mandelbrot","collatz","galton","feigenbaum","primemap"]
+  carosello=document.getElementById("carosello");
+  if(ok==1 && carosello.matches(':hover')){
+    ok=0;
+    immagini=["mandelbrot","collatz","galton","feigenbaum","primemap"]
     contenitore=document.getElementById("contenitore");
     ora=document.getElementById("immagineora");
     dopo=document.getElementById("immaginedopo");
@@ -101,6 +103,7 @@ function autoSlide() {
     contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
     contenitore.style.left = "-200%";
     timeout=setTimeout(() => {
+      ok=1;
       ora.src = "Immagini/"+immagini[slideIndex]+".png";
       contenitore.style.transition = "0s";
       contenitore.style.left = "-100%";
@@ -239,39 +242,10 @@ function slide5(){
   }
 }
 function setbutton(){
-  if(slideIndex==0){
-    document.getElementById("bslide1").className = "bslidefull";
-    document.getElementById("bslide2").className = "bslideempty";
-    document.getElementById("bslide3").className = "bslideempty";
-    document.getElementById("bslide4").className = "bslideempty";
-    document.getElementById("bslide5").className = "bslideempty";
-  }
-  if(slideIndex==1){
-    document.getElementById("bslide1").className = "bslideempty";
-    document.getElementById("bslide2").className = "bslidefull";
-    document.getElementById("bslide3").className = "bslideempty";
-    document.getElementById("bslide4").className = "bslideempty";
-    document.getElementById("bslide5").className = "bslideempty";
-  }
-  if(slideIndex==2){
-    document.getElementById("bslide1").className = "bslideempty";
-    document.getElementById("bslide2").className = "bslideempty";
-    document.getElementById("bslide3").className = "bslidefull";
-    document.getElementById("bslide4").className = "bslideempty";
-    document.getElementById("bslide5").className = "bslideempty";
-  }
-  if(slideIndex==3){
-    document.getElementById("bslide1").className = "bslideempty";
-    document.getElementById("bslide2").className = "bslideempty";
-    document.getElementById("bslide3").className = "bslideempty";
-    document.getElementById("bslide4").className = "bslidefull";
-    document.getElementById("bslide5").className = "bslideempty";
-  }
-  if(slideIndex==4){
-    document.getElementById("bslide1").className = "bslideempty";
-    document.getElementById("bslide2").className = "bslideempty";
-    document.getElementById("bslide3").className = "bslideempty";
-    document.getElementById("bslide4").className = "bslideempty";
-    document.getElementById("bslide5").className = "bslidefull";
-  }
+  document.getElementById("bslide1").className = "bslideempty";
+  document.getElementById("bslide2").className = "bslideempty";
+  document.getElementById("bslide3").className = "bslideempty";
+  document.getElementById("bslide4").className = "bslideempty";
+  document.getElementById("bslide5").className = "bslideempty";
+  document.getElementById("bslide"+(slideIndex+1).toString()).className = "bslidefull";
 }
