@@ -6,6 +6,7 @@
   background-color: #FFFFFF;
   width: 100%;
   height: calc(6vw + 6vh);
+  z-index: 1;
 }
 
 .bottomborder{
