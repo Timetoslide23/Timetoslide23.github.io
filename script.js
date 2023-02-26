@@ -95,16 +95,17 @@ function autoSlide() {
     ok=0;
     immagini=["mandelbrot","collatz","galton","feigenbaum","primemap"]
     contenitore=document.getElementById("contenitore");
-    ora=document.getElementById("immagineora");
-    dopo=document.getElementById("immaginedopo");
+    prima=document.getElementById("immagineprima"); titoloprima=document.getElementById("titoloprima");
+    ora=document.getElementById("immagineora"); titoloora=document.getElementById("titoloora");
+    dopo=document.getElementById("immaginedopo"); titolodopo=document.getElementById("titolodopo");
     slideIndex++;
     slideIndex=slideIndex%5;
-    dopo.src = "Immagini/"+immagini[slideIndex]+".png";
+    dopo.src = "Immagini/"+immagini[slideIndex]+".png"; titolodopo.innerHTML=immagini[slideIndex].toUpperCase();
     contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
     contenitore.style.left = "-200%";
     timeout=setTimeout(() => {
       ok=1;
-      ora.src = "Immagini/"+immagini[slideIndex]+".png";
+      ora.src = "Immagini/"+immagini[slideIndex]+".png"; titoloora.innerHTML=immagini[slideIndex].toUpperCase();
       contenitore.style.transition = "0s";
       contenitore.style.left = "-100%";
       timeout=setTimeout(() => {autoSlide();},2000)},2000)
@@ -117,16 +118,16 @@ function slide1(){
     clearTimeout(timeout)
     ok=0;
     contenitore=document.getElementById("contenitore");
-    prima=document.getElementById("immagineprima");
-    ora=document.getElementById("immagineora");
-    dopo=document.getElementById("immaginedopo");
+    prima=document.getElementById("immagineprima"); titoloprima=document.getElementById("titoloprima");
+    ora=document.getElementById("immagineora"); titoloora=document.getElementById("titoloora");
+    dopo=document.getElementById("immaginedopo"); titolodopo=document.getElementById("titolodopo");
     if(slideIndex>0){
-      prima.src = "Immagini/mandelbrot.png";
+      prima.src = "Immagini/mandelbrot.png"; titoloprima.innerHTML="MANDELBROT";
       contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
       contenitore.style.left = "0%";
     }
     timeout=setTimeout(() => {
-      ora.src = "Immagini/mandelbrot.png";
+      ora.src = "Immagini/mandelbrot.png"; titoloora.innerHTML="MANDELBROT";
       contenitore.style.transition = "0s";
       contenitore.style.left = "-100%";
       ok=1;
@@ -140,21 +141,21 @@ function slide2(){
     clearTimeout(timeout)
     ok=0;
     contenitore=document.getElementById("contenitore");
-    prima=document.getElementById("immagineprima");
-    ora=document.getElementById("immagineora");
-    dopo=document.getElementById("immaginedopo");
+    prima=document.getElementById("immagineprima"); titoloprima=document.getElementById("titoloprima");
+    ora=document.getElementById("immagineora"); titoloora=document.getElementById("titoloora");
+    dopo=document.getElementById("immaginedopo"); titolodopo=document.getElementById("titolodopo");
     if(slideIndex>1){
-      prima.src = "Immagini/collatz.png";
+      prima.src = "Immagini/collatz.png"; titoloprima.innerHTML="COLLATZ";
       contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
       contenitore.style.left = "0%";
     }
     else if(slideIndex<1){
-      dopo.src = "Immagini/collatz.png";
+      dopo.src = "Immagini/collatz.png"; titolodopo.innerHTML="COLLATZ";
       contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
       contenitore.style.left = "-200%";
     }
     timeout=setTimeout(() => {
-      ora.src = "Immagini/collatz.png";
+      ora.src = "Immagini/collatz.png"; titoloora.innerHTML="COLLATZ";
       contenitore.style.transition = "0s";
       contenitore.style.left = "-100%";
       ok=1;
@@ -168,21 +169,21 @@ function slide3(){
     clearTimeout(timeout)
     ok=0;
     contenitore=document.getElementById("contenitore");
-    prima=document.getElementById("immagineprima");
-    ora=document.getElementById("immagineora");
-    dopo=document.getElementById("immaginedopo");
+    prima=document.getElementById("immagineprima"); titoloprima=document.getElementById("titoloprima");
+    ora=document.getElementById("immagineora"); titoloora=document.getElementById("titoloora");
+    dopo=document.getElementById("immaginedopo"); titolodopo=document.getElementById("titolodopo");
     if(slideIndex>2){
-      prima.src = "Immagini/galton.png";
+      prima.src = "Immagini/galton.png"; titoloprima.innerHTML="GALTON";
       contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
       contenitore.style.left = "0%";
     }
     else if(slideIndex<2){
-      dopo.src = "Immagini/galton.png";
+      dopo.src = "Immagini/galton.png"; titolodopo.innerHTML="GALTON";
       contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
       contenitore.style.left = "-200%";
     }
     timeout=setTimeout(() => {
-      ora.src = "Immagini/galton.png";
+      ora.src = "Immagini/galton.png"; titoloora.innerHTML="GALTON";
       contenitore.style.transition = "0s";
       contenitore.style.left = "-100%";
       ok=1;
@@ -196,21 +197,21 @@ function slide4(){
     clearTimeout(timeout)
     ok=0;
     contenitore=document.getElementById("contenitore");
-    prima=document.getElementById("immagineprima");
-    ora=document.getElementById("immagineora");
-    dopo=document.getElementById("immaginedopo");
+    prima=document.getElementById("immagineprima"); titoloprima=document.getElementById("titoloprima");
+    ora=document.getElementById("immagineora"); titoloora=document.getElementById("titoloora");
+    dopo=document.getElementById("immaginedopo"); titolodopo=document.getElementById("titolodopo");
     if(slideIndex>3){
-      prima.src = "Immagini/feigenbaum.png";
+      prima.src = "Immagini/feigenbaum.png"; titoloprima.innerHTML="FEIGENBAUM";
       contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
       contenitore.style.left = "0%";
     }
     else if(slideIndex<3){
-      dopo.src = "Immagini/feigenbaum.png";
+      dopo.src = "Immagini/feigenbaum.png"; titolodopo.innerHTML="FEIGENBAUM";
       contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
       contenitore.style.left = "-200%";
     }
     timeout=setTimeout(() => {
-      ora.src = "Immagini/feigenbaum.png";
+      ora.src = "Immagini/feigenbaum.png"; titoloora.innerHTML="FEIGENBAUM";
       contenitore.style.transition = "0s";
       contenitore.style.left = "-100%";
       ok=1;
@@ -224,16 +225,16 @@ function slide5(){
     clearTimeout(timeout)
     ok=0;
     contenitore=document.getElementById("contenitore");
-    prima=document.getElementById("immagineprima");
-    ora=document.getElementById("immagineora");
-    dopo=document.getElementById("immaginedopo");
+    prima=document.getElementById("immagineprima"); titoloprima=document.getElementById("titoloprima");
+    ora=document.getElementById("immagineora"); titoloora=document.getElementById("titoloora");
+    dopo=document.getElementById("immaginedopo"); titolodopo=document.getElementById("titolodopo");
     if(slideIndex<4){
-      dopo.src = "Immagini/primemap.png";
+      dopo.src = "Immagini/primemap.png"; titolodopo.innerHTML="PRIMEMAP";
       contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
       contenitore.style.left = "-200%";
     }
     timeout=setTimeout(() => {
-      ora.src = "Immagini/primemap.png";
+      ora.src = "Immagini/primemap.png"; titoloora.innerHTML="PRIMEMAP";
       contenitore.style.transition = "0s";
       contenitore.style.left = "-100%";
       ok=1;
