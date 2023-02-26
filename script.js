@@ -110,6 +110,7 @@ function autoSlide() {
       timeout=setTimeout(() => {autoSlide();},2000)},2000)
     setbutton();
   }
+  else{timeout=setTimeout(() => {autoSlide();},2000)}
 }
 function slide1(){
   if(ok==1 && slideIndex!=0){
