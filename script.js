@@ -101,12 +101,12 @@ function autoSlide() {
     slideIndex=slideIndex%5;
     dopo.src = "Immagini/"+immagini[slideIndex]+".png";
     contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
-    contenitore.style.left = "-75%";
+    contenitore.style.left = "-100%";
     timeout=setTimeout(() => {
       ok=1;
       ora.src = "Immagini/"+immagini[slideIndex]+".png";
       contenitore.style.transition = "0s";
-      contenitore.style.left = "-25%";
+      contenitore.style.left = "0%";
       timeout=setTimeout(() => {autoSlide();},2000)},2000)
     setbutton();
   }
@@ -123,12 +123,12 @@ function slide1(){
     if(slideIndex>0){
       prima.src = "Immagini/mandelbrot.png";
       contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
-      contenitore.style.left = "25%";
+      contenitore.style.left = "100%";
     }
     timeout=setTimeout(() => {
       ora.src = "Immagini/mandelbrot.png";
       contenitore.style.transition = "0s";
-      contenitore.style.left = "-25%";
+      contenitore.style.left = "0%";
       ok=1;
       timeout=setTimeout(() => {autoSlide();},2000)},2000)
     slideIndex=0;
@@ -146,17 +146,17 @@ function slide2(){
     if(slideIndex>1){
       prima.src = "Immagini/collatz.png";
       contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
-      contenitore.style.left = "25%";
+      contenitore.style.left = "100%";
     }
     else if(slideIndex<1){
       dopo.src = "Immagini/collatz.png";
       contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
-      contenitore.style.left = "-75%";
+      contenitore.style.left = "-100%";
     }
     timeout=setTimeout(() => {
       ora.src = "Immagini/collatz.png";
       contenitore.style.transition = "0s";
-      contenitore.style.left = "-25%";
+      contenitore.style.left = "0%";
       ok=1;
       timeout=setTimeout(() => {autoSlide();},2000)},2000)
     slideIndex=1;
@@ -174,17 +174,17 @@ function slide3(){
     if(slideIndex>2){
       prima.src = "Immagini/galton.png";
       contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
-      contenitore.style.left = "25%";
+      contenitore.style.left = "100%";
     }
     else if(slideIndex<2){
       dopo.src = "Immagini/galton.png";
       contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
-      contenitore.style.left = "-75%";
+      contenitore.style.left = "-100%";
     }
     timeout=setTimeout(() => {
       ora.src = "Immagini/galton.png";
       contenitore.style.transition = "0s";
-      contenitore.style.left = "-25%";
+      contenitore.style.left = "0%";
       ok=1;
       timeout=setTimeout(() => {autoSlide();},2000)},2000)
     slideIndex=2;
@@ -202,17 +202,17 @@ function slide4(){
     if(slideIndex>3){
       prima.src = "Immagini/feigenbaum.png";
       contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
-      contenitore.style.left = "25%";
+      contenitore.style.left = "100%";
     }
     else if(slideIndex<3){
       dopo.src = "Immagini/feigenbaum.png";
       contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
-      contenitore.style.left = "-75%";
+      contenitore.style.left = "-100%";
     }
     timeout=setTimeout(() => {
       ora.src = "Immagini/feigenbaum.png";
       contenitore.style.transition = "0s";
-      contenitore.style.left = "-25%";
+      contenitore.style.left = "0%";
       ok=1;
       timeout=setTimeout(() => {autoSlide();},2000)},2000)
     slideIndex=3;
@@ -230,12 +230,12 @@ function slide5(){
     if(slideIndex<4){
       dopo.src = "Immagini/primemap.png";
       contenitore.style.transition = "cubic-bezier(0.8,0,0.2,1) 2s";
-      contenitore.style.left = "-75%";
+      contenitore.style.left = "-100%";
     }
     timeout=setTimeout(() => {
       ora.src = "Immagini/primemap.png";
       contenitore.style.transition = "0s";
-      contenitore.style.left = "-25%";
+      contenitore.style.left = "0%";
       ok=1;
       timeout=setTimeout(() => {autoSlide();},2000)},2000)
     slideIndex=4;
