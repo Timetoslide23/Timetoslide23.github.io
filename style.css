@@ -148,8 +148,8 @@ input{
   overflow: hidden;
 }
 .image-container {
-  width: 300%;
-  left: -100%;
+  width: 150%;
+  left: -50%;
   height: calc(30vw + 30vh);
   clear: both;
   position: relative;
