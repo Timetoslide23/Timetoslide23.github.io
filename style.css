@@ -149,7 +149,7 @@ input{
 }
 .image-container {
   width: 150%;
-  left: -50%;
+  left: -25%;
   height: calc(30vw + 30vh);
   clear: both;
   position: relative;
