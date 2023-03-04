@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- GOOGLE ANALYTICS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6S7WZ0WV5T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6S7WZ0WV5T');
+    </script>
+    <!-- TITOLO E ICONA -->
+    <meta charset="UTF-8">
+    <title>TimeToMath</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/Timetoslide23/Timetoslide23.github.io/main/Immagini/Icona.png">
+    <!-- CARICA CSS E JAVASCRIPT -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <!-- SITO RESPONSIVO-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CARICA IL FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CARICA ICONE SOCIAL -->
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body onload=setslideshow()>
+    <header>
+      <div class="bottomborder"></div>
+      <span class="logo">TTM</span>
+      <button class="bheader" onclick=contacts()>Contacts</button>
+      <button class="bheader" onclick=about() style="right: calc(7vw + 7vh);">About</button>
+      <button class="bheaderattivo" onclick=home() style="right: calc(11vw + 11vh);">Home</button>
+    </header>
+    <h1>Available arguments:</h1>
+    <div class="slider" id="carosello">
+      <div class="image-container" id="contenitore">
+        <span class="slide" style="width: calc(100% / 3); height: calc(20vw + 20vh); background-color: #FFFFFF;">
+          <h1 id="titoloprima" style="position: absolute; top: 10%; left: 50%; transform: translate(-50%, -50%); color: #29312c;">COLLATZ</h1>
+          <img id="immagineprima" src="Immagini/collatz.png" style="height: 100%; width: auto;" />
+        </span>
+        <span class="slide" style="width: calc(100% / 3); height: calc(20vw + 20vh); background-color: #FFFFFF;">
+          <h1 id="titoloora" style="position: absolute; top: 10%; left: 50%; transform: translate(-50%, -50%); color: #29312c;">MANDELBROT</h1>
+          <img id="immagineora" src="Immagini/mandelbrot.png" style="height: 100%; width: auto;" />
+        </span>
+         <span class="slide" style="width: calc(100% / 3); height: calc(20vw + 20vh); background-color: #FFFFFF;">
+           <h1 id="titolodopo" style="position: absolute; top: 10%; left: 50%; transform: translate(-50%, -50%); color: #29312c;">GALTON</h1>
+           <img id="immaginedopo" src="Immagini/galton.png" style="top: 0; height: 100%; width: auto;" />
+        </span>
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="bslidefull" id="bslide1" onclick=slide1()></button>
+      <button class="bslideempty" id="bslide2" onclick=slide2()></button>
+      <button class="bslideempty" id="bslide3" onclick=slide3()></button>
+      <button class="bslideempty" id="bslide4" onclick=slide4()></button>
+      <button class="bslideempty" id="bslide5" onclick=slide5()></button>
+    </div>
+    <footer>
+      <ul class="social-icons mb-md" style="width: 100%; display: inline-flex; align-items: end; height: calc(8vw + 8vh + 2px); margin: 0; padding: 0;">
+        <li style="width: calc(50% - 3vw - 3vh);"><hr style="height: 2px; margin: calc(1vw + 1vh - 1px) 0; border: 0; background-color: #29312c"/></li>
+        <li><a href="www.facebook.com"><i class="fa fa-facebook" style="color: #29312c;"></i></a></li>
+        <li><a href="www.instagram.com"><i class="fa fa-instagram" style="color: #29312c;"></i></a></li>
+        <li><a href="www.twitter.com"><i class="fa fa-twitter" style="color: #29312c;"></i></a></li>
+        <li style="width: calc(50% - 3vw - 3vh);"><hr style="height: 2px; margin: calc(1vw + 1vh - 1px) 0; border: 0; background-color: #29312c"/></li>
+      </ul>
+      <p style="font-size: calc(0.5vw + 0.5vh); color: #29312c; margin: 0;">Lorenzo Capelli 2023</p>
+    </footer>
+  </body>
+</html>
