@@ -41,11 +41,6 @@ h4 {
     padding: 16px;
 }
 
-p {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
 /* Header Menu */
 nav {
     display: flex;
