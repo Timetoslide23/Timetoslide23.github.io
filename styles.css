@@ -182,10 +182,31 @@ nav ul li b:hover {
     transition: all 1s ease-out;
 }
 
-/* Add a hover effect if you want */
 .button:hover {
     background-color: #f5eede;
     color: #e2017a;
+}
+
+.buttonB {
+    background-color: #fac7cc;
+    color: #960e58;
+    padding: 16px;
+    margin: 16px;
+    font-family: JuneBug;
+    font-size: 50px;
+    font-weight: 100;
+    border-radius: 32px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+
+.buttonB:hover {
+    background-color: #960e58;
+    color: #fac7cc;
 }
 
 /* Quando lo schermo � inferiore a 782px, max-width diventa 560px */
